@@ -22,12 +22,12 @@ int main(){
     }
     // columnWise;
     cout<<"Column Wise"<<endl;
-    for(int row=0;row<3;row++){
-        for(int col=0;col<3;col++){
-            cout<<arr[col][row]<<" ";
-        }
-        cout<<endl;
+   for(int row=0;row<3;row++){
+    for(int col=0;col<3;col++){
+        cout<<arr[col][row]<<" ";
     }
+    cout<<endl;
+   }
 
     // diagonal Wise
     cout<<"Diagonal Wise"<<endl;
