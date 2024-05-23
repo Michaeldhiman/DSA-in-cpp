@@ -55,7 +55,12 @@ int main(){
     else cout<<target<<" Not Found in arr"<<endl;
     if(ans2) cout<<target2<<" Found  in arr2"<<endl;
     else cout<<target2<<" Not Found in arr2"<<endl;
- 
+
+    // binary Search using STL
+
+    int answer=binary_search(arr,arr+size,target);
+    if(answer) cout<<target<<" Found  in arr"<<endl;
+    else cout<<target<<" Not Found in arr"<<endl;
     return 0;
 
 }
