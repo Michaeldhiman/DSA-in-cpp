@@ -45,6 +45,8 @@ int main(){
     // we are using binary search 
     findFirstOccurrence(arr,n,target,ansindex);
     findLastOccurrence(arr,n,target,ansindex2);
+    int totalOccurrence=ansindex2-ansindex+1;
+    cout<<"Total Occurrence of "<<target<<" is:"<<totalOccurrence<<endl;
     cout<<"First Occurrence of "<<target<<" is:"<<ansindex<<endl;
     cout<<"Last Occurrence of "<<target<<" is:"<<ansindex2<<endl;
      
