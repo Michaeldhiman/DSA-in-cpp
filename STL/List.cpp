@@ -17,15 +17,23 @@ int main(){
     // 60 --> 10 -->20 
     mylist.push_front(70);
     // 70 --> 60 --> 10 --> 20 
-    mylist.pop_front(); // delete from leftmost sidde
-    // 60 --> 10 --> 20  
+    mylist.pop_front(); // delete from leftmost side
+    // 60 --> 10 --> 20
+    mylist.push_back(10);  
     cout<<"size of list is:"<<mylist.size()<<endl;
     cout<<"front element is:"<<mylist.front()<<endl;
     cout<<"last element is:"<<mylist.back()<<endl;
-    
+    cout<<" Before Removing"<<endl;
     list<int>::iterator it;
     for(it=mylist.begin();it!=mylist.end();it++){
         cout<<*(it)<<" ";
+    }
+    cout<<endl; 
+    mylist.remove(10);
+    cout<<" After Removing"<<endl;
+    list<int>::iterator it2;
+    for(it2=mylist.begin();it2!=mylist.end();it2++){
+        cout<<*(it2)<<" ";
     }
     cout<<endl;
 
