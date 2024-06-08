@@ -15,7 +15,11 @@ void printvv(vector<vector<int>> v){
 
 }
 bool comp(vector<int> &a,vector<int> &b){
-    return a[1]<b[1];
+    if(a[0]!=b[0]){
+        return a[0]<b[0];
+    }else{
+        return a[1]>b[1];
+    }
 }
 // bool mycomp(int a, int b){
 //     return a>b; // decreasing
@@ -28,7 +32,7 @@ int main(){
 
     vector<vector<int>>v={{1,45},{0,55},{0,22},{0,11},{2,33}};
 
-    
+
     // vector<vector<int>> arr;
     // int n;
     // cout<<"Enter the number of elements: ";
