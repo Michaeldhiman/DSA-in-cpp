@@ -10,7 +10,7 @@ class Node{
         this->next=NULL;
     }
 };
-Node *insertAtHead(int value,Node* &head,Node* &tail){
+void insertAtHead(int value,Node* &head,Node* &tail){
     if(head==NULL && tail ==NULL){
     Node* newNode=new Node(value);
     head=newNode;
@@ -20,7 +20,7 @@ Node *insertAtHead(int value,Node* &head,Node* &tail){
         newNode->next=head;
         head=newNode;
     }
-    return head;
+    return ;
 }
 // HW: return exact position if found
 bool search(int value,Node*&head,Node*&tail){
@@ -31,15 +31,30 @@ bool search(int value,Node*&head,Node*&tail){
     }
     return false;
 }
+bool search2(int value,Node* head,int & index){
+    Node *temp=head;
+    int pos=1;
+    while(temp!=NULL){
+        if(temp->data==value){
+            index=pos;
+            return true;
+        }
+        pos++;
+        temp=temp->next;
+    }
+    return false;
+}
 int main(){
     Node* head=NULL;
     Node* tail=NULL;
-    head =insertAtHead(10,head,tail);
-    head=insertAtHead(20,head,tail);
-    head=insertAtHead(30,head,tail);
-    head=insertAtHead(40,head,tail);
-    head=insertAtHead(50,head,tail);
-    bool ans=search(80,head,tail);
+    int index=-1;
+    insertAtHead(10,head,tail);
+    insertAtHead(20,head,tail);
+    insertAtHead(30,head,tail);
+    insertAtHead(40,head,tail);
+    insertAtHead(50,head,tail);
+    bool ans=search2(50,head,index);
+    cout<<"index:"<<index<<endl;
     if(ans) cout<<"Target found";
     else cout<<"Not Found";
 
