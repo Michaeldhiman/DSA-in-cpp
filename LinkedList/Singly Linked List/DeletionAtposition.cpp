@@ -32,7 +32,7 @@ void deleteNode(int position,Node*& head,Node *&tail){
     else if(head==tail){
         Node *temp=head;
         head=NULL;
-        tail==NULL;
+        tail=NULL;
         delete temp;
     }else{
         // 2 case position 1 and other position
