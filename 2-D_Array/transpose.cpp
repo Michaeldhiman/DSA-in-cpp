@@ -1,4 +1,3 @@
-// search a element and find out whether element is present or not
 
 #include<bits/stdc++.h>
 using namespace std;
